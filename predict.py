@@ -2,6 +2,8 @@
 
 import numpy as np
 import os
+import random
+import sys
 num_weights = 28
 file_weights = 'weights.csv'
 team_data = 'data\PredictionData\data_2019.csv'
@@ -57,6 +59,14 @@ def classify_probability(prob):
     else: return 0
 
 
+# Returns a random number between 0 and 1, and determines the winner of a game based on probability
+# Returns 1 if higher seeded team won, 0 if lower seeded team won
+def classify_with_rng(prob):
+    rand_num = random.random()
+    if rand_num <= prob: return 1
+    else: return 0
+
+
 # Returns the probability that the higher seeded team will win
 def sigmoid_function(z):
     return 1.0 / (1.0 + np.exp(-z))
@@ -82,6 +92,10 @@ def initialize():
 if __name__ == "__main__":
 
     initialize()
+
+    # Allows for RNG result based on higher-seeded team winning
+    # TODO: Needs to be set within code for now. Eventually, this can be a parameter when running the script
+    rng_flag = 1
 
     # Read the weights and cast as an np.array
     with open(file_weights) as f:
@@ -125,7 +139,14 @@ if __name__ == "__main__":
             assert(difference[1] <= 0)  # Asserts that we minused the lower seeded team from the higher seeded team
 
             high_seed_win_odds = calculate_odds(difference, weights)
-            winning_team = classify_probability(high_seed_win_odds)
+            if rng_flag == 0:
+                winning_team = classify_probability(high_seed_win_odds)
+            elif rng_flag == 1:
+                winning_team = classify_with_rng(high_seed_win_odds)
+            else:
+                print('ERROR: rng_flag has invalid value.')
+                sys.exit()
+
 
             # Prints out game results
             print('--------------------')
@@ -146,7 +167,7 @@ if __name__ == "__main__":
     with open(winners_file) as a:
         a_lines = a.readlines()
         for a_line in a_lines:
-            seed, team_id = a_line.strip('\n').split(',')
+            seed, team_id, = a_line.strip('\n').split(',')
             if seed == 'R4W1':
 
                 print('East Champions:\t\t', get_team_name(team_id))
