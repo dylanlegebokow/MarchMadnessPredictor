@@ -12,7 +12,7 @@ rating_stats = '\RatingStats\RatingStats_'
 conference_stats = '\ConferenceTournament\Conference_'
 out_file = 'data\DataForML\data_'
 
-vector_length = 26
+vector_length = 24
 
 
 # Returns a teams stats on a per-game basis
@@ -82,7 +82,7 @@ def get_data(start_year, end_year, mm_seeds, base_directory):
                 bxs = a.readlines()
                 for bx in bxs:
                     _, school_name1, games_played, wins, _, _, _, _, _, _, _, _, _, _, _, _, _, _, fgm, _, fgp, \
-                    threem, _, threep, ftm, _, ftp, otb, trb, ast, stl, blk, tov, pf = bx.split(',')
+                    threem, _, threep, ftm, _, ftp, orb, trb, ast, stl, blk, tov, pf = bx.split(',')
                     school_name1 = school_name1.strip('"').replace(' NCAA', '')
                     if school_name1 == team_name:
                         # Create a function that removes all the '"'s, white-space from a string
@@ -94,7 +94,7 @@ def get_data(start_year, end_year, mm_seeds, base_directory):
                         threep = format_string(threep)
                         ftm = per_game(games_played, format_string(ftm))
                         ftp = format_string(ftp)
-                        otb = per_game(games_played, format_string(otb)) if string_exists(otb) else 0
+                        orb = per_game(games_played, format_string(orb)) if string_exists(orb) else 0
                         trb = per_game(games_played, format_string(trb)) if string_exists(trb) else 0
                         ast = per_game(games_played, format_string(ast))
                         stl = per_game(games_played, format_string(stl))
@@ -102,15 +102,15 @@ def get_data(start_year, end_year, mm_seeds, base_directory):
                         tov = per_game(games_played, format_string(tov)) if string_exists(tov) else 0
                         pf = per_game(games_played, format_string(pf)) if string_exists(pf) else 0
 
-                        data_point = assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp, otb,
+                        data_point = assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp, orb,
                                               trb, ast, stl, blk, tov, pf)
 
             # Gets some other statistics for teams not covered in the function above
             with open(base_directory+this_rating_stats) as b:
                 cxs = b.readlines()
                 for cx in cxs:
-                    _, school_name2, conference1, _, _, _, ppg, oppg, _, _, sos, _, osrs, dsrs, srs, ortg, drtg, \
-                    nrtg = cx.split(',')
+                    _, school_name2, conference1, _, _, _, ppg, oppg, _, _, sos, _, osrs, dsrs, _, ortg, drtg, _ = \
+                        cx.split(',')
                     school_name2 = school_name2.strip('"')
                     if school_name2 == team_name:
                         ppg = format_string(ppg)
@@ -118,12 +118,10 @@ def get_data(start_year, end_year, mm_seeds, base_directory):
                         sos = format_string(sos)
                         osrs = format_string(osrs)
                         dsrs = format_string(dsrs)
-                        srs = format_string(srs)
                         ortg = format_string(ortg) if string_exists(ortg) else 0
                         drtg = format_string(drtg) if string_exists(drtg) else 0
-                        nrtg = format_string(nrtg) if string_exists(nrtg) else 0
 
-                        data_point = assign_2(data_point, ppg, oppg, sos, osrs, dsrs, srs, ortg, drtg, nrtg)
+                        data_point = assign_2(data_point, ppg, oppg, sos, osrs, dsrs, ortg, drtg)
 
             # Imports data on the team's conference to infer how strong of a conference they play in
             with open(base_directory+this_conference_stats) as b:
@@ -132,8 +130,8 @@ def get_data(start_year, end_year, mm_seeds, base_directory):
                     conference2, winner, runner_up = dx.split(',')
                     winner = winner.strip()
                     runner_up = runner_up.strip()
-                    data_point[24] = 1 if team_name == winner else 0
-                    data_point[25] = 1 if team_name == runner_up else 0
+                    data_point[22] = 1 if team_name == winner else 0
+                    data_point[23] = 1 if team_name == runner_up else 0
 
             # Append data to output file based on corresponding year
             this_out_file = base_directory+'\DataForML\data_'+season+'.csv'

@@ -13,7 +13,7 @@ uf_winners_file = 'winners_2019.txt'
 team_names = 'data\Team_IDs.csv'
 mm_seeds = 'data\PredictionData\MMSeeds_with_Team_IDs.csv'
 
-num_weights = 28
+num_weights = 26
 
 
 # Returns a school's name

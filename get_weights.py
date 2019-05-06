@@ -7,8 +7,7 @@ filename = 'data\difference_vectors.csv'
 file_weights = 'data\weights.csv'
 
 epochs = 1000
-learning_rate = 0.0000003
-
+learning_rate = 0.0000006
 
 # Normalizes all the values in the matrix
 def normalize(this_X):

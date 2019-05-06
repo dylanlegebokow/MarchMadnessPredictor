@@ -8,7 +8,7 @@ difference_vectors = 'data\difference_vectors.csv'
 team_data = 'data\DataForML\data_'
 mm_outcomes = 'data\MMScores.csv'
 
-vector_length = 28
+vector_length = 26
 
 
 # Reads in a team's statistics

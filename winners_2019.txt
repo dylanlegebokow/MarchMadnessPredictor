@@ -1,268 +1,268 @@
 Game:	Belmont(11) vs Temple(11)
 Winner:	Belmont(11)
-Win %:	0.79998
+Win %:	0.87512
 -------------------------
 Game:	N Dakota St(16) vs NC Central(16)
 Winner:	N Dakota St(16)
-Win %:	0.72753
+Win %:	0.71208
 -------------------------
 Game:	Arizona St(11) vs St John's(11)
 Winner:	Arizona St(11)
-Win %:	0.63662
+Win %:	0.65258
 -------------------------
 Game:	F Dickinson(16) vs Prairie View(16)
 Winner:	F Dickinson(16)
-Win %:	0.57459
+Win %:	0.58554
 -------------------------
 Game:	Duke(1) vs N Dakota St(16)
 Winner:	Duke(1)
-Win %:	0.99127
+Win %:	0.99104
 -------------------------
 Game:	Michigan St(2) vs Bradley(15)
 Winner:	Michigan St(2)
-Win %:	0.98733
+Win %:	0.99044
 -------------------------
 Game:	LSU(3) vs Yale(14)
 Winner:	LSU(3)
-Win %:	0.86407
+Win %:	0.88052
 -------------------------
 Game:	Virginia Tech(4) vs St Louis(13)
 Winner:	Virginia Tech(4)
-Win %:	0.83771
+Win %:	0.78978
 -------------------------
 Game:	Mississippi St(5) vs Liberty(12)
 Winner:	Mississippi St(5)
-Win %:	0.91559
+Win %:	0.93444
 -------------------------
 Game:	Maryland(6) vs Belmont(11)
 Winner:	Belmont(11)
-Win %:	0.6787
+Win %:	0.83378
 -------------------------
 Game:	Louisville(7) vs Minnesota(10)
 Winner:	Louisville(7)
-Win %:	0.60929
+Win %:	0.56914
 -------------------------
 Game:	VA Commonwealth(8) vs UCF(9)
 Winner:	UCF(9)
-Win %:	0.54663
+Win %:	0.56388
 -------------------------
 Game:	Gonzaga(1) vs F Dickinson(16)
 Winner:	Gonzaga(1)
-Win %:	0.98735
+Win %:	0.98165
 -------------------------
 Game:	Michigan(2) vs Montana(15)
 Winner:	Michigan(2)
-Win %:	0.75678
+Win %:	0.54384
 -------------------------
 Game:	Texas Tech(3) vs N Kentucky(14)
-Winner:	Texas Tech(3)
-Win %:	0.56298
+Winner:	N Kentucky(14)
+Win %:	0.7059
 -------------------------
 Game:	Florida St(4) vs Vermont(13)
 Winner:	Florida St(4)
-Win %:	0.88611
+Win %:	0.89606
 -------------------------
 Game:	Marquette(5) vs Murray St(12)
-Winner:	Marquette(5)
-Win %:	0.54023
+Winner:	Murray St(12)
+Win %:	0.52569
 -------------------------
 Game:	Buffalo(6) vs Arizona St(11)
 Winner:	Buffalo(6)
-Win %:	0.76943
+Win %:	0.81636
 -------------------------
 Game:	Nevada(7) vs Florida(10)
 Winner:	Nevada(7)
-Win %:	0.75897
+Win %:	0.84888
 -------------------------
 Game:	Syracuse(8) vs Baylor(9)
 Winner:	Baylor(9)
-Win %:	0.59267
+Win %:	0.64579
 -------------------------
 Game:	Virginia(1) vs Gardner Webb(16)
 Winner:	Virginia(1)
-Win %:	0.87768
+Win %:	0.67174
 -------------------------
 Game:	Tennessee(2) vs Colgate(15)
 Winner:	Tennessee(2)
-Win %:	0.95615
+Win %:	0.95401
 -------------------------
 Game:	Purdue(3) vs Old Dominion(14)
 Winner:	Purdue(3)
-Win %:	0.95544
+Win %:	0.96225
 -------------------------
 Game:	Kansas St(4) vs UC Irvine(13)
 Winner:	UC Irvine(13)
-Win %:	0.5586
+Win %:	0.7443
 -------------------------
 Game:	Wisconsin(5) vs Oregon(12)
-Winner:	Wisconsin(5)
-Win %:	0.50963
+Winner:	Oregon(12)
+Win %:	0.59
 -------------------------
 Game:	Villanova(6) vs St Mary's CA(11)
 Winner:	Villanova(6)
-Win %:	0.73426
+Win %:	0.80367
 -------------------------
 Game:	Cincinnati(7) vs Iowa(10)
 Winner:	Iowa(10)
-Win %:	0.74847
+Win %:	0.82784
 -------------------------
 Game:	Mississippi(8) vs Oklahoma(9)
 Winner:	Mississippi(8)
-Win %:	0.63635
+Win %:	0.71533
 -------------------------
 Game:	North Carolina(1) vs Iona(16)
 Winner:	North Carolina(1)
-Win %:	0.98844
+Win %:	0.98897
 -------------------------
 Game:	Kentucky(2) vs Abilene Chr(15)
 Winner:	Kentucky(2)
-Win %:	0.95672
+Win %:	0.9442
 -------------------------
 Game:	Houston(3) vs Georgia St(14)
 Winner:	Houston(3)
-Win %:	0.81726
+Win %:	0.76209
 -------------------------
 Game:	Kansas(4) vs Northeastern(13)
 Winner:	Kansas(4)
-Win %:	0.86781
+Win %:	0.85552
 -------------------------
 Game:	Auburn(5) vs New Mexico St(12)
 Winner:	Auburn(5)
-Win %:	0.81407
+Win %:	0.81982
 -------------------------
 Game:	Iowa St(6) vs Ohio St(11)
 Winner:	Iowa St(6)
-Win %:	0.79797
+Win %:	0.85349
 -------------------------
 Game:	Wofford(7) vs Seton Hall(10)
 Winner:	Wofford(7)
-Win %:	0.74272
+Win %:	0.79118
 -------------------------
 Game:	Utah St(8) vs Washington(9)
 Winner:	Utah St(8)
-Win %:	0.77346
+Win %:	0.85103
 -------------------------
 Game:	Duke(1) vs UCF(9)
 Winner:	Duke(1)
-Win %:	0.96674
+Win %:	0.98049
 -------------------------
 Game:	Michigan St(2) vs Louisville(7)
 Winner:	Michigan St(2)
-Win %:	0.84642
+Win %:	0.88438
 -------------------------
 Game:	LSU(3) vs Belmont(11)
 Winner:	LSU(3)
-Win %:	0.67513
+Win %:	0.63576
 -------------------------
 Game:	Virginia Tech(4) vs Mississippi St(5)
 Winner:	Mississippi St(5)
-Win %:	0.65088
+Win %:	0.7644
 -------------------------
 Game:	Gonzaga(1) vs Baylor(9)
 Winner:	Gonzaga(1)
-Win %:	0.9257
+Win %:	0.93697
 -------------------------
 Game:	Michigan(2) vs Nevada(7)
 Winner:	Nevada(7)
-Win %:	0.6526
+Win %:	0.79883
 -------------------------
-Game:	Texas Tech(3) vs Buffalo(6)
+Game:	Buffalo(6) vs N Kentucky(14)
 Winner:	Buffalo(6)
-Win %:	0.80821
+Win %:	0.86481
 -------------------------
-Game:	Florida St(4) vs Marquette(5)
+Game:	Florida St(4) vs Murray St(12)
 Winner:	Florida St(4)
-Win %:	0.59317
+Win %:	0.54273
 -------------------------
 Game:	Virginia(1) vs Mississippi(8)
-Winner:	Virginia(1)
-Win %:	0.64473
+Winner:	Mississippi(8)
+Win %:	0.52746
 -------------------------
 Game:	Tennessee(2) vs Iowa(10)
 Winner:	Tennessee(2)
-Win %:	0.73991
+Win %:	0.7371
 -------------------------
 Game:	Purdue(3) vs Villanova(6)
 Winner:	Purdue(3)
-Win %:	0.67142
+Win %:	0.64174
 -------------------------
-Game:	Wisconsin(5) vs UC Irvine(13)
-Winner:	Wisconsin(5)
-Win %:	0.57528
+Game:	Oregon(12) vs UC Irvine(13)
+Winner:	UC Irvine(13)
+Win %:	0.51598
 -------------------------
 Game:	North Carolina(1) vs Utah St(8)
 Winner:	North Carolina(1)
-Win %:	0.90234
+Win %:	0.91836
 -------------------------
 Game:	Kentucky(2) vs Wofford(7)
 Winner:	Kentucky(2)
-Win %:	0.61219
+Win %:	0.52626
 -------------------------
 Game:	Houston(3) vs Iowa St(6)
 Winner:	Iowa St(6)
-Win %:	0.52882
+Win %:	0.5269
 -------------------------
 Game:	Kansas(4) vs Auburn(5)
 Winner:	Auburn(5)
-Win %:	0.66959
+Win %:	0.71868
 -------------------------
 Game:	Duke(1) vs Mississippi St(5)
 Winner:	Duke(1)
-Win %:	0.85943
+Win %:	0.8696
 -------------------------
 Game:	Michigan St(2) vs LSU(3)
 Winner:	Michigan St(2)
-Win %:	0.64714
+Win %:	0.57441
 -------------------------
 Game:	Gonzaga(1) vs Florida St(4)
 Winner:	Gonzaga(1)
-Win %:	0.86711
+Win %:	0.88089
 -------------------------
 Game:	Buffalo(6) vs Nevada(7)
 Winner:	Buffalo(6)
-Win %:	0.70007
+Win %:	0.78874
 -------------------------
-Game:	Virginia(1) vs Wisconsin(5)
-Winner:	Virginia(1)
-Win %:	0.77585
+Game:	Mississippi(8) vs UC Irvine(13)
+Winner:	Mississippi(8)
+Win %:	0.69144
 -------------------------
 Game:	Tennessee(2) vs Purdue(3)
 Winner:	Tennessee(2)
-Win %:	0.73303
+Win %:	0.80937
 -------------------------
 Game:	North Carolina(1) vs Auburn(5)
 Winner:	North Carolina(1)
-Win %:	0.7393
+Win %:	0.76675
 -------------------------
 Game:	Kentucky(2) vs Iowa St(6)
 Winner:	Kentucky(2)
-Win %:	0.61503
+Win %:	0.60806
 -------------------------
 Game:	Duke(1) vs Michigan St(2)
 Winner:	Duke(1)
-Win %:	0.64615
+Win %:	0.66744
 -------------------------
 Game:	Gonzaga(1) vs Buffalo(6)
 Winner:	Gonzaga(1)
-Win %:	0.76599
+Win %:	0.69163
 -------------------------
-Game:	Virginia(1) vs Tennessee(2)
+Game:	Tennessee(2) vs Mississippi(8)
 Winner:	Tennessee(2)
-Win %:	0.80484
+Win %:	0.92238
 -------------------------
 Game:	North Carolina(1) vs Kentucky(2)
 Winner:	North Carolina(1)
-Win %:	0.81481
+Win %:	0.88244
 -------------------------
 Game:	Duke(1) vs Gonzaga(1)
 Winner:	Duke(1)
-Win %:	0.52788
+Win %:	0.54868
 -------------------------
 Game:	North Carolina(1) vs Tennessee(2)
 Winner:	North Carolina(1)
-Win %:	0.66641
+Win %:	0.70071
 -------------------------
 Game:	Duke(1) vs North Carolina(1)
-Winner:	Duke(1)
-Win %:	0.51149
+Winner:	North Carolina(1)
+Win %:	0.54078
 -------------------------

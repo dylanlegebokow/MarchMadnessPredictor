@@ -200,7 +200,7 @@ def get_team_id(this_school_num):
 
 
 # Assigns data to an np.array
-def assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp, otb, trb,
+def assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp, orb, trb,
              ast, stl, blk, tov, pf):
     data_point[0] = games_played
     data_point[1] = wins
@@ -210,7 +210,7 @@ def assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp,
     data_point[5] = threep
     data_point[6] = ftm
     data_point[7] = ftp
-    data_point[8] = otb
+    data_point[8] = orb
     data_point[9] = trb
     data_point[10] = ast
     data_point[11] = stl
@@ -221,14 +221,12 @@ def assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp,
 
 
 # Assigns data to an np.array
-def assign_2(data_point, ppg, oppg, sos, osrs, dsrs, srs, ortg, drtg, nrtg):
+def assign_2(data_point, ppg, oppg, sos, osrs, dsrs, ortg, drtg):
     data_point[15] = ppg
     data_point[16] = oppg
     data_point[17] = sos
     data_point[18] = osrs
     data_point[19] = dsrs
-    data_point[20] = srs
-    data_point[21] = ortg
-    data_point[22] = drtg
-    data_point[23] = nrtg
+    data_point[20] = ortg
+    data_point[21] = drtg
     return data_point

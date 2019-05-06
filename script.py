@@ -26,7 +26,7 @@ if __name__ == "__main__":
         # Format raw 2019 tournament data into points that can be manipulated
         print('Formatting 2018-2019 season data...')
         get_data(2019, 2020, 'data\PredictionData\MMSeeds_with_Team_IDs.csv',
-                            'data\PredictionData')
+                 'data\PredictionData')
 
         # Create vectors that will be used as datapoints for Logistic Regression
         print('Creating vectors...')
