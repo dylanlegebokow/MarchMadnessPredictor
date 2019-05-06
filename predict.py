@@ -3,14 +3,17 @@
 import numpy as np
 import os
 import random
-import sys
-num_weights = 28
+
+# Files and Partial Files
 file_weights = 'data\weights.csv'
 team_data = 'data\PredictionData\DataForML\data_2019.csv'
 mm_bracket = 'data\PredictionData\MMBracket_2019.csv'
 winners_file = 'data\PredictionData\Winners_2019.csv'
 uf_winners_file = 'winners_2019.txt'
 team_names = 'data\Team_IDs.csv'
+mm_seeds = 'data\PredictionData\MMSeeds_with_Team_IDs.csv'
+
+num_weights = 28
 
 
 # Returns a school's name
@@ -39,7 +42,7 @@ def get_team_stats(team_id):
 
 # Returns a school's ID
 def get_team_id(mm_seed):
-    with open('data\PredictionData\MMSeeds_with_Team_IDs.csv') as a:
+    with open(mm_seeds) as a:
         a_lines = a.readlines()
         for a_line in a_lines:
             _, seed, team_id = a_line.split(',')
@@ -93,6 +96,11 @@ def append_to_uf_winners(team_1, team_2, winner, prob):
         y.write(to_write_1)
 
 
+# Creates string of team name plus team seed
+def get_full_team_title(team_name, team_seed):
+    return team_name + '(' + str(int(team_seed)) + ')'
+
+
 # Removes old prediction file if exists, creates a new one
 def initialize():
     if os.path.isfile(winners_file):
@@ -103,9 +111,7 @@ def initialize():
 
 def predict(rng_flag):
 
-    # If rng_flag is set, software uses probability along with random number to determine who wins (non-deterministic)
-    # If rng_flag is not set, software only selects team with highest winning probability (deterministic)
-
+    # Removes old files
     initialize()
 
     # Read the weights and cast as an np.array
@@ -137,6 +143,7 @@ def predict(rng_flag):
             team_1_stats = get_team_stats(team_1_id)
             team_2_stats = get_team_stats(team_2_id)
 
+            # Assures we subtract the lower seeded team from the higher seeded team
             if team_1_stats[1] > team_2_stats[1]:
                 temp = team_1_stats
                 team_1_stats = team_2_stats
@@ -146,22 +153,22 @@ def predict(rng_flag):
                 team_2_id = temp
 
             difference = team_1_stats - team_2_stats
-            difference[0] = 1 #Done so w * x works as: w0 + w1x1 + w2x2...
-            assert(difference[1] <= 0)  # Asserts that we minused the lower seeded team from the higher seeded team
 
+            # Done so w * x works as: 1*w0 + w1x1 + w2x2...
+            difference[0] = 1
+
+            # Asserts that we subtracted the lower seeded team from the higher seeded team
+            assert(difference[1] <= 0)
+
+            # determines whether to use classifying or probabilistic approach
             high_seed_win_odds = calculate_odds(difference, weights)
-            if rng_flag == 0:
-                winning_team = classify_probability(high_seed_win_odds)
-            elif rng_flag == 1:
-                winning_team = classify_with_rng(high_seed_win_odds)
-            else:
-                print('ERROR: rng_flag has invalid value.')
-                sys.exit()
-
+            winning_team = classify_probability(high_seed_win_odds) if rng_flag == 0 else \
+                classify_with_rng(high_seed_win_odds)
 
             # Outputs game results to two different files
-            team_1_string = get_team_name(team_1_id) + '(' + str(int(team_1_stats[1])) + ')'
-            team_2_string = get_team_name(team_2_id) + '(' + str(int(team_2_stats[1])) + ')'
+            team_1_string = get_full_team_title(get_team_name(team_1_id), team_1_stats[1])
+            team_2_string = get_full_team_title(get_team_name(team_2_id), team_2_stats[1])
+
             if winning_team == 1:
                 append_to_uf_winners(team_1_string, team_2_string, team_1_string, round(high_seed_win_odds, 5))
                 append_to_winners(game_id, team_1_id)

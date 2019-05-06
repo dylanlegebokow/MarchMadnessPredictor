@@ -1,8 +1,7 @@
-from data import get_data_historical
+from data import get_data
 from get_vectors import get_vectors
 from get_weights import get_weights
 from predict import predict
-
 import sys
 
 if __name__ == "__main__":
@@ -22,11 +21,11 @@ if __name__ == "__main__":
     if full_build_flag == 1:
         # Format raw data into datapoints that can be used
         print('Formatting historical data...')
-        get_data_historical(1993, 2017, 'data\MMSeeds_with_Team_IDs.csv', 'data')
+        get_data(1993, 2017, 'data\MMSeeds_with_Team_IDs.csv', 'data')
 
         # Format raw 2019 tournament data into points that can be manipulated
         print('Formatting 2018-2019 season data...')
-        get_data_historical(2019, 2020, 'data\PredictionData\MMSeeds_with_Team_IDs.csv',
+        get_data(2019, 2020, 'data\PredictionData\MMSeeds_with_Team_IDs.csv',
                             'data\PredictionData')
 
         # Create vectors that will be used as datapoints for Logistic Regression
@@ -35,7 +34,7 @@ if __name__ == "__main__":
 
         # Create the weights using Logistic Regression
         print('Determining weights...')
-        get_weights()
+        print(get_weights())
 
     # Predict the 2019 tournament bracket
     print('Predicting...')

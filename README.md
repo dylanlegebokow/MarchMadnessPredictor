@@ -14,12 +14,11 @@ This software can be run using the command line
 
 ### Parameters Used for Logistic Regression
 - LIST PARAMETERS HERE
-Definitions of terms found at:
+- Definitions of terms found at:
 https://www.basketball-reference.com/about/glossary.html
 
 ### Things To Improve
-- Currently, data.py and data_2019.py are doing almost identical tasks. Should be consolidated into one file so changes are easier to implement in the future.
-- Use variables as file names instead of hardcoding them into the software
+- Most conference winners and runner-ups aren't recognized
 - Improve functions for setting vectors
 
 ### Built With

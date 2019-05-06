@@ -6,13 +6,13 @@ import re
 import os
 from utils import *
 
-vector_length = 26
-
 # Files and Partial Files
 mm_stats = '\TeamStats\MMStats_'
 rating_stats = '\RatingStats\RatingStats_'
 conference_stats = '\ConferenceTournament\Conference_'
 out_file = 'data\DataForML\data_'
+
+vector_length = 26
 
 
 # Returns a teams stats on a per-game basis
@@ -49,7 +49,7 @@ def append_data_point(output_file, school_num, seed, data_point):
         z.write(string_to_write)
 
 
-def get_data_historical(start_year, end_year, mm_seeds, base_directory):
+def get_data(start_year, end_year, mm_seeds, base_directory):
 
     initialize(start_year, end_year, base_directory)
 
@@ -84,7 +84,6 @@ def get_data_historical(start_year, end_year, mm_seeds, base_directory):
                     _, school_name1, games_played, wins, _, _, _, _, _, _, _, _, _, _, _, _, _, _, fgm, _, fgp, \
                     threem, _, threep, ftm, _, ftp, otb, trb, ast, stl, blk, tov, pf = bx.split(',')
                     school_name1 = school_name1.strip('"').replace(' NCAA', '')
-                    #school_name1 = school_name1.strip('"')
                     if school_name1 == team_name:
                         # Create a function that removes all the '"'s, white-space from a string
                         games_played = format_string(games_played)

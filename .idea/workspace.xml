@@ -2,44 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b2c3023-dba6-4ede-965e-c78cf1c22baf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/PredictionData/Conference_2019.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/PredictionData/RatingStats_2019.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/PredictionData/TeamStats_2019.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/PredictionData/data_2019.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_2019.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/Seasons.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.py" afterPath="$PROJECT_DIR$/data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_1993.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_1993.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_1994.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_1994.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_1995.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_1995.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_1996.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_1996.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_1997.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_1997.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_1998.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_1998.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_1999.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_1999.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2000.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2000.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2001.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2001.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2002.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2002.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2003.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2003.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2004.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2004.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2005.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2005.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2006.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2006.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2007.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2007.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2008.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2008.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2009.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2009.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2010.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2010.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2011.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2011.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2012.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2012.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2013.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2013.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2014.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2014.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2015.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2015.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DataForML/data_2016.csv" afterPath="$PROJECT_DIR$/data/DataForML/data_2016.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/data.csv" afterPath="$PROJECT_DIR$/data/data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/weights.csv" afterPath="$PROJECT_DIR$/data/weights.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_vectors.py" afterPath="$PROJECT_DIR$/get_vectors.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_weights.py" afterPath="$PROJECT_DIR$/get_weights.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/predict.py" afterPath="$PROJECT_DIR$/predict.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script.py" afterPath="$PROJECT_DIR$/script.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/winners_2019.txt" afterPath="$PROJECT_DIR$/winners_2019.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="script.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="script.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -63,7 +34,7 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="3978">
               <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
               <folding />
             </state>
@@ -73,8 +44,8 @@
       <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1737">
-              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="867">
+              <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
               <folding>
                 <element signature="e#191#209#0" expanded="true" />
               </folding>
@@ -85,8 +56,8 @@
       <file leaf-file-name="get_vectors.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_vectors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#94#103#0" expanded="true" />
               </folding>
@@ -97,8 +68,8 @@
       <file leaf-file-name="get_weights.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_weights.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+            <state relative-caret-position="68">
+              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -106,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="predict.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#65#83#0" expanded="true" />
               </folding>
@@ -144,12 +115,12 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/format_2019_data.py" />
         <option value="$PROJECT_DIR$/get_data_points.py" />
+        <option value="$PROJECT_DIR$/data_2019.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/get_vectors.py" />
         <option value="$PROJECT_DIR$/get_weights.py" />
-        <option value="$PROJECT_DIR$/data_2019.py" />
         <option value="$PROJECT_DIR$/predict.py" />
         <option value="$PROJECT_DIR$/data.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/script.py" />
       </list>
     </option>
@@ -174,8 +145,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,6 +156,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -216,15 +187,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20726173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21028744" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39473686" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31743422" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -339,57 +311,30 @@
     <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/bracket_predictions.jpg" />
     <entry file="file://$PROJECT_DIR$/../SENG474/MarchMadness/get_weights.py" />
-    <entry file="file://$PROJECT_DIR$/get_vectors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-          <folding>
-            <element signature="e#94#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data_2019.py" />
     <entry file="file://$PROJECT_DIR$/get_weights.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+        <state relative-caret-position="68">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
+    <entry file="file://$PROJECT_DIR$/get_vectors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#65#83#0" expanded="true" />
+            <element signature="e#94#103#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1737">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding>
-            <element signature="e#191#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_2019.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="53" column="79" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="3978">
           <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
           <folding />
         </state>
@@ -398,8 +343,28 @@
     <entry file="file://$PROJECT_DIR$/script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding>
+            <element signature="e#191#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#65#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

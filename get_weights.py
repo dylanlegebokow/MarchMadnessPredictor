@@ -2,8 +2,12 @@ import csv
 import numpy as np
 import os
 
-filename = 'data\data.csv'
+# Files
+filename = 'data\difference_vectors.csv'
 file_weights = 'data\weights.csv'
+
+epochs = 1000
+learning_rate = 0.0000003
 
 
 # Normalizes all the values in the matrix
@@ -34,8 +38,6 @@ def calculate_cost(this_beta, this_X, this_y):
 
 # Runs gradient descent
 def gradient_descent(this_X, this_y, this_beta):
-    epochs = 1000
-    learning_rate = 0.0000003
     for m in range(epochs):
         this_beta = this_beta - (learning_rate * log_gradient(this_beta, this_X, this_y))
     return this_beta
@@ -48,7 +50,36 @@ def predict_values(beta, X):
     return np.squeeze(team_won)
 
 
+# Creates weights' value string
+def create_string(weights):
+    weights = weights.tolist()
+    w = ''
+    for i in weights:
+        for j in i:
+            w = w + str(j) + ','
+    w = w.strip(',')
+    return w
+
+
+# Creates string of weight labels
+def create_labels(count):
+    labels = []
+    for i in range(count):
+        labels.append('w'+str(i))
+    labels = ','.join(labels).strip(',') + '\n'
+    return labels
+
+
+# Print the weights to file
+def print_weights(labels, w):
+    with open(file_weights, 'w+') as f:
+        f.writelines([labels, w])
+
+
 def get_weights():
+
+    # Remove old values of weights
+    os.remove(file_weights)
 
     # Reads in the datapoints
     with open(filename, "r") as f:
@@ -75,25 +106,17 @@ def get_weights():
     predictions = predict_values(weights, X)
     correct_predictions = np.sum(y==predictions)
     total_predictions = np.size(y)
-    print("  Correct Labels:   " + str(correct_predictions) + ' / ' + str(total_predictions) + "    (" +
-          str(round((correct_predictions / total_predictions), 5)) + ")")
-
-    # Remove old values of weights
-    os.remove(file_weights)
+    prediction_accuracy = "  Correct Labels:   " + str(correct_predictions) + ' / ' + str(total_predictions) + "    (" \
+                +str(round((correct_predictions / total_predictions), 5)) + ")"
 
     # Write new values of weights
-    weights = weights.tolist()
-    w = ''
-    for i in weights:
-        for j in i:
-            w = w + str(j) + ','
-    w = w.strip(',')
+    w = create_string(weights)
+    count = w.count(',')
 
-    with open(file_weights, 'w+') as f:
-        w_indices = ''
-        w_vals = ''
-        flat_beta = [item for sublist in weights for item in sublist]
-        for r in range(len(flat_beta)):
-            w_indices = w_indices + 'w' + str(r) + ','
-        w_indices = w_indices.strip(',') + '\n'
-        f.writelines([w_indices, w])
+    # Write weights' labels
+    labels = create_labels(count + 1)
+
+    # Print w to file
+    print_weights(labels, w)
+
+    return prediction_accuracy

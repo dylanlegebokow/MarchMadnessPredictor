@@ -3,6 +3,11 @@
 import os
 import numpy as np
 
+# Files and Partial Files
+difference_vectors = 'data\difference_vectors.csv'
+team_data = 'data\DataForML\data_'
+mm_outcomes = 'data\MMScores.csv'
+
 vector_length = 28
 
 
@@ -20,12 +25,23 @@ def get_team_data(input_file, team_id):
     return team_vector
 
 
+# Appends each vector to the difference_vectors file
+def append_vectors(point):
+    string_to_write = []
+    for i in point:
+        string_to_write.append(str(i))
+    string_to_write = ','.join(string_to_write)
+    string_to_write = string_to_write + '\n'
+    with open(difference_vectors, 'a') as h:
+        h.write(string_to_write)
+
+
 def get_vectors():
 
     # Removes the old data
-    os.remove('data\data.csv')
+    os.remove(difference_vectors)
 
-    with open('data\MMScores.csv') as f:
+    with open(mm_outcomes) as f:
         lines = f.readlines()
         for line in lines:
             season, _, winning_team_id, _, losing_team_id, _, _, _ = line.split(',')
@@ -33,9 +49,8 @@ def get_vectors():
             # Because the first instance is the title 'Season' and that isn't a year
             if season == 'Season':
                 continue
-
             season = str(season)
-            input_file = 'data\DataForML\data_' + season + '.csv'
+            input_file = team_data+season+'.csv'
 
             # Finds the team stats and turns them into np.arrays
             winning_team_vector = get_team_data(input_file, winning_team_id)
@@ -51,11 +66,4 @@ def get_vectors():
             point = np.roll(point, -1)
 
             # Append the string to the data.csv file
-            string_to_write = []
-            for i in point:
-                string_to_write.append(str(i))
-            string_to_write = ','.join(string_to_write)
-            string_to_write = string_to_write + '\n'
-
-            with open('data\data.csv', 'a') as h:
-                h.write(string_to_write)
+            append_vectors(point)
