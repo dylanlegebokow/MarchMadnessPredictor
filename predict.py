@@ -5,10 +5,11 @@ import os
 import random
 import sys
 num_weights = 28
-file_weights = 'weights.csv'
+file_weights = 'data\weights.csv'
 team_data = 'data\PredictionData\data_2019.csv'
 mm_bracket = 'data\PredictionData\MMBracket_2019.csv'
 winners_file = 'data\PredictionData\Winners_2019.csv'
+uf_winners_file = 'winners_2019.txt'
 team_names = 'data\Team_IDs.csv'
 
 
@@ -77,25 +78,35 @@ def calculate_odds(weights, team_difference):
     return sigmoid_function(ans)
 
 
+# Writes to file that is only useful for computer computation
 def append_to_winners(game_id, team_id):
     to_write = str(game_id) + ',' + str(team_id) + '\n'
     with open(winners_file, "a") as w:
         w.write(to_write)
 
 
+# Writes to user friendly file that shows predicted winners and losers
+def append_to_uf_winners(team_1, team_2, winner, prob):
+    to_write_1 = "Game:\t" + str(team_1) + " vs " + str(team_2) + "\nWinner:\t" + str(winner) + \
+                 "\nWin %:\t" + str(prob) + "\n-------------------------\n"
+    with open(uf_winners_file, "a") as y:
+        y.write(to_write_1)
+
+
 # Removes old prediction file if exists, creates a new one
 def initialize():
     if os.path.isfile(winners_file):
         os.remove(winners_file)
+    if os.path.isfile(uf_winners_file):
+        os.remove(uf_winners_file)
 
 
-if __name__ == "__main__":
+def predict(rng_flag):
+
+    # If rng_flag is set, software uses probability along with random number to determine who wins (non-deterministic)
+    # If rng_flag is not set, software only selects team with highest winning probability (deterministic)
 
     initialize()
-
-    # Allows for RNG result based on higher-seeded team winning
-    # TODO: Needs to be set within code for now. Eventually, this can be a parameter when running the script
-    rng_flag = 1
 
     # Read the weights and cast as an np.array
     with open(file_weights) as f:
@@ -148,35 +159,12 @@ if __name__ == "__main__":
                 sys.exit()
 
 
-            # Prints out game results
-            print('--------------------')
+            # Outputs game results to two different files
             team_1_string = get_team_name(team_1_id) + '(' + str(int(team_1_stats[1])) + ')'
             team_2_string = get_team_name(team_2_id) + '(' + str(int(team_2_stats[1])) + ')'
-            print('Matchup: ' + team_1_string + ' vs ' + team_2_string)
             if winning_team == 1:
-                print('Winner:\t', team_1_string)
-                print('Prob.:\t', round(high_seed_win_odds, 5))
+                append_to_uf_winners(team_1_string, team_2_string, team_1_string, round(high_seed_win_odds, 5))
                 append_to_winners(game_id, team_1_id)
             else:
-                print('Winner:\t', team_2_string)
-                print('Prob.:\t', round((1 - high_seed_win_odds), 5))
+                append_to_uf_winners(team_1_string, team_2_string, team_2_string, round((1 - high_seed_win_odds), 5))
                 append_to_winners(game_id, team_2_id)
-
-    # Returns Final Four choices, National Champ
-    print('--------------------')
-    with open(winners_file) as a:
-        a_lines = a.readlines()
-        for a_line in a_lines:
-            seed, team_id, = a_line.strip('\n').split(',')
-            if seed == 'R4W1':
-
-                print('East Champions:\t\t', get_team_name(team_id))
-            if seed == 'R4X1':
-                print('West Champions:\t\t', get_team_name(team_id))
-            if seed == 'R4Y1':
-                print('South Champions:\t', get_team_name(team_id))
-            if seed == 'R4Z1':
-                print('MidWest Champions:\t', get_team_name(team_id))
-                print('--------------------')
-            if seed == 'R6CH':
-                print('National Champions:\t', get_team_name(team_id))

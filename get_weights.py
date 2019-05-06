@@ -3,6 +3,7 @@ import numpy as np
 import os
 
 filename = 'data\data.csv'
+file_weights = 'data\weights.csv'
 
 
 # Normalizes all the values in the matrix
@@ -47,7 +48,7 @@ def predict_values(beta, X):
     return np.squeeze(team_won)
 
 
-if __name__ == "__main__":
+def get_weights():
 
     # Reads in the datapoints
     with open(filename, "r") as f:
@@ -63,6 +64,7 @@ if __name__ == "__main__":
     # Adds column of 1's to beginning of X matrix
     X = np.hstack((np.matrix(np.ones(X.shape[0])).T, X))
 
+    # Creates the vector of labels
     y = dataset[:, -1]
 
     # Initialize weights matrix, runs gradient descent
@@ -73,11 +75,11 @@ if __name__ == "__main__":
     predictions = predict_values(weights, X)
     correct_predictions = np.sum(y==predictions)
     total_predictions = np.size(y)
-    print("Correct Labels:  " + str(correct_predictions) + ' / ' + str(total_predictions))
-    print(str(round((correct_predictions / total_predictions), 5)))
+    print("  Correct Labels:   " + str(correct_predictions) + ' / ' + str(total_predictions) + "    (" +
+          str(round((correct_predictions / total_predictions), 5)) + ")")
 
     # Remove old values of weights
-    os.remove('weights.csv')
+    os.remove(file_weights)
 
     # Write new values of weights
     weights = weights.tolist()
@@ -87,7 +89,7 @@ if __name__ == "__main__":
             w = w + str(j) + ','
     w = w.strip(',')
 
-    with open('weights.csv', 'w+') as f:
+    with open(file_weights, 'w+') as f:
         w_indices = ''
         w_vals = ''
         flat_beta = [item for sublist in weights for item in sublist]

@@ -20,7 +20,7 @@ def get_team_data(input_file, team_id):
     return team_vector
 
 
-if __name__ == '__main__':
+def get_vectors():
 
     # Removes the old data
     os.remove('data\data.csv')
@@ -41,7 +41,6 @@ if __name__ == '__main__':
             winning_team_vector = get_team_data(input_file, winning_team_id)
             losing_team_vector = get_team_data(input_file, losing_team_id)
 
-            point = np.zeros((vector_length,))
             # Used so we always minus the higher seeded team from the lower seeded team, then give the label
             if winning_team_vector[1] <= losing_team_vector[1]:
                 point = winning_team_vector - losing_team_vector
@@ -51,6 +50,7 @@ if __name__ == '__main__':
                 point[0] = 0
             point = np.roll(point, -1)
 
+            # Append the string to the data.csv file
             string_to_write = []
             for i in point:
                 string_to_write.append(str(i))

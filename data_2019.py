@@ -13,7 +13,7 @@ def per_game(games, total):
     return total / games
 
 
-if __name__ == '__main__':
+def get_data_2019():
 
     os.remove('data\PredictionData\data_2019.csv')
 

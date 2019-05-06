@@ -14,14 +14,14 @@ def per_game(games, total):
     return total / games
 
 
-# Removes old files so new ones can be made
+# Removes all old files so new ones can be made
 def initialize():
     for i in range(1993, 2017):
         remove_file = 'data\DataForML\data_' + str(i) + '.csv'
         os.remove(remove_file)
 
 
-if __name__ == '__main__':
+def get_data_historical():
 
     initialize()
 
