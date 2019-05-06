@@ -6,7 +6,7 @@ import random
 import sys
 num_weights = 28
 file_weights = 'data\weights.csv'
-team_data = 'data\PredictionData\data_2019.csv'
+team_data = 'data\PredictionData\DataForML\data_2019.csv'
 mm_bracket = 'data\PredictionData\MMBracket_2019.csv'
 winners_file = 'data\PredictionData\Winners_2019.csv'
 uf_winners_file = 'winners_2019.txt'

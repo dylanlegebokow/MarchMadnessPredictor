@@ -8,6 +8,12 @@ from utils import *
 
 vector_length = 26
 
+# Files and Partial Files
+mm_stats = '\TeamStats\MMStats_'
+rating_stats = '\RatingStats\RatingStats_'
+conference_stats = '\ConferenceTournament\Conference_'
+out_file = 'data\DataForML\data_'
+
 
 # Returns a teams stats on a per-game basis
 def per_game(games, total):
@@ -15,18 +21,40 @@ def per_game(games, total):
 
 
 # Removes all old files so new ones can be made
-def initialize():
-    for i in range(1993, 2017):
-        remove_file = 'data\DataForML\data_' + str(i) + '.csv'
+def initialize(start_year, end_year, output_directory):
+    for i in range(start_year, end_year):
+        remove_file = output_directory+'\DataForML\data_' + str(i) + '.csv'
         os.remove(remove_file)
 
 
-def get_data_historical():
+# Checks to see if string exists
+def string_exists(this_string):
+    return True if this_string.strip().strip('"') != '' else False
 
-    initialize()
+
+# Formats string so it can be recognized
+def format_string(this_string):
+    return float(this_string.strip().strip('"'))
+
+
+# Append team data to corresponding output file based on year
+def append_data_point(output_file, school_num, seed, data_point):
+    string_to_write = [str(school_num)]
+    string_to_write.append(str(seed))
+    for i in data_point:
+        string_to_write.append(str(i))
+    string_to_write = ','.join(string_to_write)
+    string_to_write = string_to_write + '\n'
+    with open(output_file, 'a') as z:
+        z.write(string_to_write)
+
+
+def get_data_historical(start_year, end_year, mm_seeds, base_directory):
+
+    initialize(start_year, end_year, base_directory)
 
     # Only need data pertaining to the teams that made the tournament. This function finds those teams
-    with open('data\MMSeeds_with_Team_IDs.csv') as f:
+    with open(mm_seeds) as f:
         lines = f.readlines()
         for line in lines:
             season, seed, school_num = line.split(',')
@@ -46,111 +74,68 @@ def get_data_historical():
             # Creates an empty vector of length 'vector_length' which will store all the data for that data point
             data_point = np.zeros((vector_length,))
 
-            mm_stats = 'data\TeamStats\MMStats_'+str(season)+'.csv'
-            rating_stats = 'data\RatingStats\RatingStats_'+str(season)+'.csv'
-            conference_stats = 'data\ConferenceTournament\Conference_'+str(season)+'.csv'
+            this_mm_stats = mm_stats+str(season)+'.csv'
+            this_rating_stats = rating_stats+str(season)+'.csv'
+            this_conference_stats = conference_stats+str(season)+'.csv'
 
-            # Gets a team's statistics for a particular season, depending on file
-            # Definitions of terms found at:
-            # https://www.basketball-reference.com/about/glossary.html
-
-            with open(mm_stats) as a:
+            with open(base_directory+this_mm_stats) as a:
                 bxs = a.readlines()
                 for bx in bxs:
                     _, school_name1, games_played, wins, _, _, _, _, _, _, _, _, _, _, _, _, _, _, fgm, _, fgp, \
                     threem, _, threep, ftm, _, ftp, otb, trb, ast, stl, blk, tov, pf = bx.split(',')
-                    school_name1 = school_name1.strip('"')
+                    school_name1 = school_name1.strip('"').replace(' NCAA', '')
+                    #school_name1 = school_name1.strip('"')
                     if school_name1 == team_name:
                         # Create a function that removes all the '"'s, white-space from a string
-                        games_played = int(games_played.strip().strip('"'))
-                        wins = int(wins.strip().strip('"'))
-                        fgm = per_game(games_played, float(fgm.strip().strip('"')))
-                        fgp = float(fgp.strip().strip('"'))
-                        threem = per_game(games_played, int(threem.strip().strip('"')))
-                        threep = float(threep.strip().strip('"'))
-                        ftm = per_game(games_played, int(ftm.strip().strip('"')))
-                        ftp = float(ftp.strip().strip('"'))
-                        if otb.strip().strip('"') != '':
-                            otb = per_game(games_played, int(otb.strip().strip('"')))
-                        else:
-                            otb = 0
-                        if trb.strip().strip('"') != '':
-                            trb = per_game(games_played, int(trb.strip().strip('"')))
-                        else:
-                            trb = 0
-                        ast = per_game(games_played, int(ast.strip().strip('"')))
-                        stl = per_game(games_played, int(stl.strip().strip('"')))
-                        blk = per_game(games_played, int(blk.strip().strip('"')))
-                        if tov.strip().strip('"') != '':
-                            tov = per_game(games_played, int(tov.strip().strip('"')))
-                        else:
-                            tov = 0
-                        if pf.strip().strip('"') != '':
-                            pf = per_game(games_played, int(pf.strip().strip('"')))
-                        else:
-                            pf = 0
+                        games_played = format_string(games_played)
+                        wins = format_string(wins)
+                        fgm = per_game(games_played, format_string(fgm))
+                        fgp = format_string(fgp)
+                        threem = per_game(games_played, format_string(threem))
+                        threep = format_string(threep)
+                        ftm = per_game(games_played, format_string(ftm))
+                        ftp = format_string(ftp)
+                        otb = per_game(games_played, format_string(otb)) if string_exists(otb) else 0
+                        trb = per_game(games_played, format_string(trb)) if string_exists(trb) else 0
+                        ast = per_game(games_played, format_string(ast))
+                        stl = per_game(games_played, format_string(stl))
+                        blk = per_game(games_played, format_string(blk))
+                        tov = per_game(games_played, format_string(tov)) if string_exists(tov) else 0
+                        pf = per_game(games_played, format_string(pf)) if string_exists(pf) else 0
 
-                        data_point = assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp,
-                                              otb, trb, ast, stl, blk, tov, pf)
+                        data_point = assign_1(data_point, games_played, wins, fgm, fgp, threem, threep, ftm, ftp, otb,
+                                              trb, ast, stl, blk, tov, pf)
 
             # Gets some other statistics for teams not covered in the function above
-            with open(rating_stats) as b:
+            with open(base_directory+this_rating_stats) as b:
                 cxs = b.readlines()
                 for cx in cxs:
                     _, school_name2, conference1, _, _, _, ppg, oppg, _, _, sos, _, osrs, dsrs, srs, ortg, drtg, \
                     nrtg = cx.split(',')
                     school_name2 = school_name2.strip('"')
-
                     if school_name2 == team_name:
-
-                        ppg = float(ppg.strip().strip('"'))
-                        if oppg.strip().strip('"') != '':
-                            oppg = float(oppg.strip().strip('"'))
-                        else:
-                            oppg = 0
-                        sos = float(sos.strip().strip('"'))
-                        osrs = float(osrs.strip().strip('"'))
-                        dsrs = float(dsrs.strip().strip('"'))
-                        srs = float(srs.strip().strip('"'))
-                        if ortg.strip().strip('"') != '':
-                            ortg = float(ortg.strip().strip('"'))
-                        else:
-                            ortg = 0
-                        if drtg.strip().strip('"') != '':
-                            drtg = float(drtg.strip().strip('"'))
-                        else:
-                            drtg = 0
-                        if nrtg.strip().strip('"') != '':
-                            nrtg = float(nrtg.strip().strip('"'))
-                        else:
-                            nrtg = 0
+                        ppg = format_string(ppg)
+                        oppg = format_string(oppg) if string_exists(oppg) else 0
+                        sos = format_string(sos)
+                        osrs = format_string(osrs)
+                        dsrs = format_string(dsrs)
+                        srs = format_string(srs)
+                        ortg = format_string(ortg) if string_exists(ortg) else 0
+                        drtg = format_string(drtg) if string_exists(drtg) else 0
+                        nrtg = format_string(nrtg) if string_exists(nrtg) else 0
 
                         data_point = assign_2(data_point, ppg, oppg, sos, osrs, dsrs, srs, ortg, drtg, nrtg)
 
             # Imports data on the team's conference to infer how strong of a conference they play in
-            with open(conference_stats) as b:
+            with open(base_directory+this_conference_stats) as b:
                 dxs = b.readlines()
                 for dx in dxs:
                     conference2, winner, runner_up = dx.split(',')
                     winner = winner.strip()
                     runner_up = runner_up.strip()
-                    if team_name == winner:
-                        data_point = assign_3(data_point, True)
-                    if team_name == runner_up:
-                        data_point = assign_3(data_point, False)
+                    data_point[24] = 1 if team_name == winner else 0
+                    data_point[25] = 1 if team_name == runner_up else 0
 
-            if np.count_nonzero(data_point) < 5:
-                print('\n' + team_name + '\t\t' + str(school_num))
-                print(data_point)
-
-            out_file = 'data\DataForML\data_'+season+'.csv'
-
-            string_to_write = [str(school_num)]
-            string_to_write.append(str(seed))
-            for i in data_point:
-                string_to_write.append(str(i))
-            string_to_write = ','.join(string_to_write)
-            string_to_write = string_to_write + '\n'
-
-            with open(out_file, 'a') as z:
-                z.write(string_to_write)
+            # Append data to output file based on corresponding year
+            this_out_file = base_directory+'\DataForML\data_'+season+'.csv'
+            append_data_point(this_out_file, school_num, seed, data_point)

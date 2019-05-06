@@ -232,14 +232,3 @@ def assign_2(data_point, ppg, oppg, sos, osrs, dsrs, srs, ortg, drtg, nrtg):
     data_point[22] = drtg
     data_point[23] = nrtg
     return data_point
-
-
-# Assigns data to an np.array
-def assign_3(data_point, value):
-    if value == True: # Team won their conference championship tournament
-        data_point[24] = 1
-    elif value == False: # Team was the runner up in their conference championship tournament
-        data_point[25] = 1
-    else:
-        return False
-    return data_point

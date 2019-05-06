@@ -12,6 +12,11 @@ This software can be run using the command line
 <param_1> {0,1} : Set to 1 if you want the entire software to run, including formatting all the old data, creating the weights, and predicting the 2019 tournament. Set to 0 to only predict as all the files have already been created.
 <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is the team that has above 50% chance to win the game. 
 
+### Parameters Used for Logistic Regression
+- LIST PARAMETERS HERE
+Definitions of terms found at:
+https://www.basketball-reference.com/about/glossary.html
+
 ### Things To Improve
 - Currently, data.py and data_2019.py are doing almost identical tasks. Should be consolidated into one file so changes are easier to implement in the future.
 - Use variables as file names instead of hardcoding them into the software
