@@ -13,9 +13,9 @@ This software can be run using the command line
 	- <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is the team that has above 50% chance to win the game. 
 
 ### Parameters Used for Logistic Regression
-G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, CTW, CTRU
+G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, CTW, CTL
 - CTW = Conference Tournament Winner
-- CTRU = Conference Tournament Runner-Up
+- CTL = Conference Tournament Runner-Up
 - Rest of definitions found at:
 https://www.basketball-reference.com/about/glossary.html
 
