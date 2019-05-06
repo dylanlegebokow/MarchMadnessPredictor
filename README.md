@@ -13,14 +13,13 @@ This software can be run using the command line
 	- <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is the team that has above 50% chance to win the game. 
 
 ### Parameters Used for Logistic Regression
-Games Played, Wins, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, SRS, ORTG, DRTG, NRTG, Conferrence Tournament Winners, Conferrence Tournament Runners Up
+Games Played, Wins, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, Conferrence Tournament Winners, Conferrence Tournament Runners Up
 - Definitions of terms found at:
 https://www.basketball-reference.com/about/glossary.html
 
 ### Things To Improve
 - Most conference winners and runner-ups aren't recognized
 - Don't use NumPy for matricies and vectors
-- Remove one of ORTG, DRTG, NRTG
 
 ### Built With
 - Python3
