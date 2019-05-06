@@ -9,19 +9,18 @@ This software can be run using the command line
 1. Clone this repository to your local machine
 2. Using the command line, ``` $cd ``` into the location you copied this repository
 3. Run ``` $python script.py <param_1> <param_2>``` to predict this year's bracket<br>
-<param_1> {0,1} : Set to 1 if you want the entire software to run, including formatting all the old data, creating the weights, and predicting the 2019 tournament. Set to 0 to only predict as all the files have already been created.<br>
-<param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is the team that has above 50% chance to win the game. 
+	- <param_1> {0,1} : Set to 1 if you want the entire software to run, including formatting all the old data, creating the weights, and predicting the 2019 tournament. Set to 0 to only predict as all the files have already been created.<br>
+	- <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is the team that has above 50% chance to win the game. 
 
 ### Parameters Used for Logistic Regression
-* hello
-* my fren
-	* heres more
+Games Played, Wins, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, SRS, ORTG, DRTG, NRTG, Conferrence Tournament Winners, Conferrence Tournament Runners Up
 - Definitions of terms found at:
 https://www.basketball-reference.com/about/glossary.html
 
 ### Things To Improve
 - Most conference winners and runner-ups aren't recognized
-- Improve functions for setting vectors
+- Don't use NumPy for matricies and vectors
+- Remove one of ORTG, DRTG, NRTG
 
 ### Built With
 - Python3
