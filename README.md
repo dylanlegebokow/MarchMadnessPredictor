@@ -23,6 +23,10 @@ https://www.basketball-reference.com/about/glossary.html
 - Most conference winners and runner-ups aren't recognized
 - Shouldn't use NumPy for matricies and vectors as Numpy is slow
 
+### Challenges with Accuracy
+- 
+-
+
 ### Built With
 - Python3
 
