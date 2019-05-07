@@ -29,7 +29,7 @@ North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
 	   Gonzaga	       -	   F Dickinson		 = 	    Game Vector
 [1, 34, 31, 32.235, ..., 0, 1] - [16, 35, 21, 26.314, ..., 0, 0] = [-15, -1, 10, 5.912, ..., 0, 1]
 
-Game Vector 			   * 		Weights 				    = High Seed Wins %
+	  Game Vector 		   * 			Weights				    = High Seed Wins %
 [1, -15, -1, 10, 5.912, ..., 0, 1] * [0.104, 0.032, 0.091, 0.067, 0.054, ..., 0.043, 0.061] = 	   0.982
 ```
 
