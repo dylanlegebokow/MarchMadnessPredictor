@@ -11,7 +11,19 @@ This software uses logistic regression and gradient descent to predict the outco
 	- <param_1> {0,1} : Set to 1 if you want the entire software to run, including formatting all the old data, creating the weights, and predicting the 2019 tournament. Set to 0 to only predict as all the files have already been created.<br>
 	- <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is the team that has above 50% chance to win the game. 
 4. Once the software is completed, check the ```winners_2019.txt``` file in the main directory to see the predicted outcomes of the tournament<br><br>
-Example method of running: ```$python script.py 1 0```
+Example run: ```$python script.py 1 0```
+
+### How It Works
+1. For each team in March Madness for a given year, create a vector where each element in the vector corresponds to some statistic. For example:<br>
+```python
+North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
+```
+2. For each game in March Madness, subtract the lower-seeded team's vector from the higher-seeded team's vector. For example:<br>
+```python
+North Carolina - Florida Gulf Coast = Game Vector
+[1, 40, 33, 30.875, ..., 1, 0] - [16, 35, 21, 28.8, ..., 0, 0] = [-15, 5, 12, 2.075, ... 1, 0]
+```
+
 
 ### Parameters Used
 G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, CTW, CTL
@@ -25,7 +37,7 @@ https://www.basketball-reference.com/about/glossary.html
 - Research what statistics are more accurate at predicting basketball game outcomes and use those statistics
 - Include data on 2017, 2018 tournaments
 
-### Some Issues with Accuracy
+### Issues with Accuracy
 - Not using statistics that are most consistent with predicting basketball game outcomes
 - Very small training dataset (1546 datapoints between 1993 and 2016 March Madness Tournament Winners)
 - Some datapoints have missing entries (IE in 1993 season, there is no information on ORTG or DRTG. However, I decided to include this data so our training set would be bigger) 
