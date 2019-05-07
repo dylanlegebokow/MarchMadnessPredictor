@@ -18,12 +18,20 @@ Example run: ```$python script.py 1 0```
 ```python
 North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
 ```
-2. For each game in March Madness, subtract the lower-seeded team's vector from the higher-seeded team's vector. For example:<br>
+2. For each game in March Madness for a given year, subtract the lower-seeded team's vector from the higher-seeded team's vector, and label the corresponding vector corresponding to if the higher seeded team won or not. For example:<br>
 ```python
-	North Carolina 	       -      Florida Gulf Coast       = 	 Game Vector
-[1, 40, 33, 30.875, ..., 1, 0] - [16, 35, 21, 28.8, ..., 0, 0] = [-15, 5, 12, 2.075, ... 1, 0]
+	North Carolina 	       -      Florida Gulf Coast       = 	 Game Vector	        Label
+[1, 40, 33, 30.875, ..., 1, 0] - [16, 35, 21, 28.8, ..., 0, 0] = [-15, 5, 12, 2.075, ... 1, 0]   [1]
 ```
+3. After creating every game vector in each March Madness, we use the Game Vectors as our training data for gradient descent with logistic regression.
+4. After calculating the weights, we use the weights to predict each game in the 2019 March Madness Tournament. For example:
+```python
+	   Gonzaga	       -	   F Dickinson		 = 	    Game Vector
+[1, 34, 31, 32.235, ..., 0, 1] - [16, 35, 21, 26.314, ..., 0, 0] = [-15, -1, 10, 5.912, ..., 0, 1]
 
+Game Vector 			   * 		Weights 				    = High Seed Wins %
+[1, -15, -1, 10, 5.912, ..., 0, 1] * [0.104, 0.032, 0.091, 0.067, 0.054, ..., 0.043, 0.061] = 	   0.982
+```
 
 ### Parameters Used
 G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, CTW, CTL
