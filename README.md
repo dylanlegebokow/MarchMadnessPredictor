@@ -32,7 +32,7 @@ North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
 	  Game Vector 		   * 			Weights				    = High Seed Wins %
 [1, -15, -1, 10, 5.912, ..., 0, 1] * [0.104, 0.032, 0.091, 0.067, 0.054, ..., 0.043, 0.061] = 	   0.982
 ```
-5. To see predictions, click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg)
+5. To see the predicted 2019 bracket, click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg)
 
 ### Parameters Used
 G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, CTW, CTL
