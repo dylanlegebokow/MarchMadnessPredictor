@@ -29,6 +29,9 @@ https://www.basketball-reference.com/about/glossary.html
 - Very small training dataset (1546 datapoints between 1993 and 2016 March Madness Tournament Winners)
 - Some datapoints have missing entries (IE in 1993 season, there is no information on ORTG or DRTG. However, I decided to include this data so our training set would be bigger) 
 
+### Data
+Collected from https://www.sports-reference.com/cbb/
+
 ### Built With
 - Python3
 
