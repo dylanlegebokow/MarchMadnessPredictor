@@ -20,7 +20,7 @@ North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
 ```
 2. For each game in March Madness, subtract the lower-seeded team's vector from the higher-seeded team's vector. For example:<br>
 ```python
-North Carolina - Florida Gulf Coast = Game Vector
+	North Carolina 	       -      Florida Gulf Coast       = 	 Game Vector
 [1, 40, 33, 30.875, ..., 1, 0] - [16, 35, 21, 28.8, ..., 0, 0] = [-15, 5, 12, 2.075, ... 1, 0]
 ```
 
