@@ -52,7 +52,9 @@ https://www.basketball-reference.com/about/glossary.html
 - Some datapoints have missing entries (IE in 1993 season, there is no information on ORTG or DRTG. However, I decided to include this data so our training set would be bigger) 
 
 ### Data
-Collected mostly from https://www.sports-reference.com/cbb/
+Data mostly collected from:
+- https://www.sports-reference.com/cbb/
+- https://github.com/adeshpande3/March-Madness-2017
 
 ### Built With
 - Python3
