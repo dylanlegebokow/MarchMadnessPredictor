@@ -19,8 +19,18 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 - Rest of definitions found at:
 https://www.basketball-reference.com/about/glossary.html
 
+<<<<<<< HEAD
 ### Things To Improve
 - Don't use NumPy for matricies and vectors as Numpy is slow
+=======
+### Current Issues
+- Most conference winners and runner-ups aren't recognized
+- Shouldn't use NumPy for matricies and vectors as Numpy is slow
+
+### Challenges with Accuracy
+- 
+-
+>>>>>>> 69bb7d32e3ebf88faa6493464083474f938a5029
 
 ### Built With
 - Python3
