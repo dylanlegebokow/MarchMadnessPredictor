@@ -19,13 +19,15 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 - Rest of definitions found at:
 https://www.basketball-reference.com/about/glossary.html
 
-### Things To Improve
-- Don't use NumPy for matricies and vectors as Numpy is slow
-- Add "Challenges with Accuracy of Model" to README
+### Future Work
+- Don't use NumPy for matricies and vectors as NumPy is slow
+- Research what statistics are more accurate at predicting basketball game outcomes and use those statistics
+- Include data on 2017, 2018 tournaments
 
-### Current Issues
-- Most conference winners and runner-ups aren't recognized
-- Shouldn't use NumPy for matricies and vectors as Numpy is slow
+### Some Issues with Accuracy
+- Not using statistics that are most consistent with predicting basketball game outcomes
+- Very small training dataset (1546 datapoints between 1993 and 2016 March Madness Tournament Winners)
+- Some datapoints have missing entries (IE in 1993 season, there is no information on ORTG or DRTG. However, I decided to include this data so our training set would be bigger) 
 
 ### Built With
 - Python3
