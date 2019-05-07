@@ -3,6 +3,7 @@ This software uses logistic regression and gradient descent to predict the outco
 
 ### Prerequisits
 - Python3
+- NumPy v1.16.0
 
 ### Running the Software
 1. Clone this repository to your local machine
