@@ -20,7 +20,6 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 https://www.basketball-reference.com/about/glossary.html
 
 ### Things To Improve
-- Most conference winners and runner-ups aren't recognized
 - Don't use NumPy for matricies and vectors as Numpy is slow
 
 ### Built With

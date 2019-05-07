@@ -130,8 +130,10 @@ def get_data(start_year, end_year, mm_seeds, base_directory):
                     conference2, winner, runner_up = dx.split(',')
                     winner = winner.strip()
                     runner_up = runner_up.strip()
-                    data_point[22] = 1 if team_name == winner else 0
-                    data_point[23] = 1 if team_name == runner_up else 0
+                    if team_name == winner:
+                        data_point[22] = 1
+                    if team_name == runner_up:
+                        data_point[23] = 1
 
             # Append data to output file based on corresponding year
             this_out_file = base_directory+'\DataForML\data_'+season+'.csv'
