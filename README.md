@@ -20,7 +20,7 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 https://www.basketball-reference.com/about/glossary.html
 
 ### Future Work
-- Don't use NumPy for matricies and vectors as NumPy is slow
+- Don't use NumPy as that package is relatively slow
 - Research what statistics are more accurate at predicting basketball game outcomes and use those statistics
 - Include data on 2017, 2018 tournaments
 
