@@ -16,6 +16,14 @@ This software uses logistic regression and gradient descent to predict the outco
 $python script.py 1 0
 ```
 
+### Built With
+- Python3
+
+### Authors
+- Dylan Legebokow
+
+---
+
 ### How It Works
 1. For each team in March Madness for a given year, create a vector where each element in the vector corresponds to some statistic. For example:<br>
 ```python
@@ -58,9 +66,3 @@ https://www.basketball-reference.com/about/glossary.html
 Data mostly collected from:
 - https://www.sports-reference.com/cbb/
 - https://github.com/adeshpande3/March-Madness-2017
-
-### Built With
-- Python3
-
-### Authors
-- Dylan Legebokow
