@@ -43,7 +43,6 @@ North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
 	  Game Vector 		   * 			Weights				    = High Seed Wins %
 [1, -15, -1, 10, 5.912, ..., 0, 1] * [0.104, 0.032, 0.091, 0.067, 0.054, ..., 0.043, 0.061] = 	   0.982
 ```
-5. To see the predicted 2019 bracket, click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg)
 
 ### Parameters Used
 G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, CTW, CTL
@@ -53,7 +52,8 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 https://www.basketball-reference.com/about/glossary.html
 
 ### 2019 Tournament Predictions
-The visual for bracket predictions can be found [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg).
+To see the text output for the 2019 tournament predictions (including the probability the higher seeded team wins), click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/winners_2019.txt)
+To see a filled out bracket based on predictions and also see how accurate the predictions were to the actual results, click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg).
 
 ### Future Work
 - Don't use the NumPy package as it is relatively slow
