@@ -55,8 +55,8 @@ https://www.basketball-reference.com/about/glossary.html
 To see the text predictions for the 2019 tournament (includes higher-seeded winning probability), click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/winners_2019.txt)<br>
 To see the predicted bracket including how accurate the predictions were to the actual results, click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg).<br>
 - All circled teams are teams predicted to win by this software
-- Green circles are correct predictions
-- Red circles are incorrect predictions
+- Green circles are correct predicted winners
+- Red circles are incorrect predicted winners
 
 ### Future Work
 - Don't use the NumPy package as it is relatively slow
