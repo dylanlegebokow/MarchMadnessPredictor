@@ -52,8 +52,11 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 https://www.basketball-reference.com/about/glossary.html
 
 ### 2019 Tournament Predictions
-To see the text output for the 2019 tournament predictions (including the probability the higher seeded team wins), click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/winners_2019.txt)
-To see a filled out bracket based on predictions and also see how accurate the predictions were to the actual results, click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg).
+To see the text predictions for the 2019 tournament (includes higher-seeded winning probability), click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/winners_2019.txt)<br>
+To see the predicted bracket including how accurate the predictions were to the actual results, click [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg).<br>
+- All circled teams are teams predicted to win by this software
+- Green circles are correct predictions
+- Red circles are incorrect predictions
 
 ### Future Work
 - Don't use the NumPy package as it is relatively slow
