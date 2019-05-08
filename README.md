@@ -10,7 +10,7 @@ This software uses logistic regression and gradient descent to predict the outco
 2. Using the command line, ``` $cd ``` into the location you copied this repository
 3. In the main directory, run ``` $python script.py <param_1> <param_2>```<br>
 	- <param_1> {0,1} : Set to 1 if you want the entire software to run, including formatting all the old data, creating the weights, and predicting the 2019 tournament. Set to 0 to only predict as all the files have already been created.<br>
-	- <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is the team that has above 50% chance to win the game. 
+	- <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is always the team that has above 50% chance to win the game. 
 4. Once the software has completed running, check the ```winners_2019.txt``` file in the main directory to see the predicted outcomes of the tournament. Example run: 
 ```ShellSession
 $python script.py 1 0
@@ -43,7 +43,7 @@ North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
 	  Game Vector 		   * 			Weights				    = High Seed Wins %
 [1, -15, -1, 10, 5.912, ..., 0, 1] * [0.104, 0.032, 0.091, 0.067, 0.054, ..., 0.043, 0.061] = 	   0.982
 ```
-5. We then either classify the winning team as the team with an above 0.5 probability of winning, or choose the winner based on probability (see [Running The Software](#running-the-software), step 3]).
+5. We then either classify the winning team as the team with an above 0.5 probability of winning, or choose the winner based on probability (see [Running The Software](#running-the-software), step 3 <param_2>).
 
 ### Parameters Used
 G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, SOS, OSRS, DSRS, ORTG, DRTG, CTW, CTL
