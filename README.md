@@ -52,6 +52,9 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 - Rest of definitions found at:
 https://www.basketball-reference.com/about/glossary.html
 
+### 2019 Tournament Predictions
+The visual for bracket predictions can be found [here](https://github.com/dylanlegebokow/MarchMadnessPredictor/blob/master/2019_Predictions.jpg).
+
 ### Future Work
 - Don't use the NumPy package as it is relatively slow
 - Research what statistics are most accurate at predicting basketball game outcomes and use those statistics
