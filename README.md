@@ -11,7 +11,7 @@ This software uses logistic regression and gradient descent to predict the outco
 3. In the main directory, run ``` $python script.py <param_1> <param_2>```<br>
 	- <param_1> {0,1} : Set to 1 if you want the entire software to run, including formatting all the old data, creating the weights, and predicting the 2019 tournament. Set to 0 to only predict as all the files have already been created.<br>
 	- <param_2> {0,1} : Set to 1 to use a probabilistic approach, where if team X is given a 75% chance to win, we select them to win 3/4 times. Set to 0 to use a classifying approach to determine which team won, where the winning team is always the team that has above 50% chance to win the game. 
-4. Once the software has completed running, check the ```winners_2019.txt``` file in the main directory to see the predicted outcomes of the tournament. Example run: 
+4. Once the software has completed running, check the ```winners_2019.txt``` file in the main directory to see the predicted outcomes of the tournament. For example, to run the entire software (all files) and use a classifying approach, run the following: 
 ```ShellSession
 $python script.py 1 0
 ```
