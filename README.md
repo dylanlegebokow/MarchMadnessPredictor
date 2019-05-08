@@ -29,12 +29,12 @@ $python script.py 1 0
 ```python
 North Carolina = [1, 40, 33, 30.875, ..., 1, 0]
 ```
-2. For each game in March Madness for a given year, subtract the lower-seeded team's vector from the higher-seeded team's vector, and label the corresponding vector corresponding to if the higher seeded team won or not. For example:<br>
+2. For each game in March Madness for a given year, subtract the lower-seeded team's vector from the higher-seeded team's vector, and label the vector depending on if the higher-seeded team won. For example:<br>
 ```python
 	North Carolina 	       -      Florida Gulf Coast       = 	 Game Vector	        Label
 [1, 40, 33, 30.875, ..., 1, 0] - [16, 35, 21, 28.8, ..., 0, 0] = [-15, 5, 12, 2.075, ... 1, 0]   [1]
 ```
-3. After creating every game vector in each March Madness, we use the Game Vectors as our training data for gradient descent with logistic regression.
+3. After creating every game vector in each March Madness Tournament, we use the Game Vectors as our training data for gradient descent with logistic regression.
 4. After calculating the weights, we use the weights to predict each game in the 2019 March Madness Tournament. For example:
 ```python
 	   Gonzaga	       -	   F Dickinson		 = 	    Game Vector
@@ -53,8 +53,8 @@ G, W, FGM, FGP, 3P, 3P%, FT, FT%, ORB, TRB, AST, STL, BLK, TOV, PF, PPG, OPPG, S
 https://www.basketball-reference.com/about/glossary.html
 
 ### Future Work
-- Don't use NumPy as that package is relatively slow
-- Research what statistics are more accurate at predicting basketball game outcomes and use those statistics
+- Don't use the NumPy package as it is relatively slow
+- Research what statistics are most accurate at predicting basketball game outcomes and use those statistics
 - Include data on 2017, 2018 tournaments
 
 ### Issues with Accuracy
